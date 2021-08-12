@@ -14,14 +14,39 @@
   background-color: gray;
 }
 
+.navBar {
+  display: grid;
+  grid-template-columns: auto auto;
+  list-style: none;
+  margin: 5%;
+}
+
+.menuNav {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  list-style: none;
+  width: 50%;
+  margin-left: auto;
+}
+
+.title {
+  margin: unset;
+  font-size: 48px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 5%;
+}
+
 h5 {
   position: relative;
-  text-align: end;
+  text-align: start;
   padding-right: 5%;
   padding-top: 5%;
   padding-bottom: 5%;
   font-size: 18px;
-  background-color: gray;
   margin: unset;
 }
 

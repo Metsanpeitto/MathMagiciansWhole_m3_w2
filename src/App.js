@@ -17,15 +17,9 @@ class App extends React.Component {
       <div className="App">
         <Navbar />
         <Switch>
-          <Route path="/">
-            <Home />
-          </Route>
-          <Route path="/calculator">
-            <Calculator />
-          </Route>
-          <Route path="quote">
-            <Quote />
-          </Route>
+          <Route exact path="/" component={Home} />
+          <Route path="/calculator" component={Calculator} />
+          <Route path="/quote" component={Quote} />
         </Switch>
       </div>
     );

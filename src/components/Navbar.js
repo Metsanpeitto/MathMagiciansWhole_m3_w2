@@ -1,61 +1,26 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { MdClose } from 'react-icons/md';
-import { FiMenu } from 'react-icons/fi';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
-  const links = [
-    {
-      id: 1,
-      path: '/',
-      text: 'Home',
-    },
-    {
-      id: 2,
-      path: '/calculator',
-      text: 'Calculator',
-    },
-    {
-      id: 3,
-      path: '/quote',
-      text: 'Quote',
-    },
-  ];
-
-  const handleToggle = () => {
-    setNavbarOpen((prev) => !prev);
-  };
-
-  const closeMenu = () => {
-    setNavbarOpen(false);
-  };
-
-  return (
-    <nav className="navBar">
-      <button onClick={handleToggle} type="button">
-        {navbarOpen ? (
-          <MdClose style={{ color: '#fff', width: '40px', height: '40px' }} />
-        ) : (
-          <FiMenu style={{ color: '#7b7b7b', width: '40px', height: '40px' }} />
-        )}
-      </button>
-
-      <ul className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
-        {links.map((link) => (
-          <li key={link.id}>
-            <NavLink
-              to={link.path}
-              activeClassName="active-link"
-              onClick={() => closeMenu()}
-              exact
-            >
-              {link.text}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
-};
+const Navbar = () => (
+  <nav className="navBar">
+    <h1 className="title">Math Magicians</h1>
+    <ul className="menuNav">
+      <li key={1}>
+        <Link to="/" activeClassName="active-link" exact>
+          Home
+        </Link>
+      </li>
+      <li key={2}>
+        <Link to="/calculator" activeClassName="active-link" exact>
+          Calculator
+        </Link>
+      </li>
+      <li key={3}>
+        <Link to="/quote" activeClassName="active-link" exact>
+          Quote
+        </Link>
+      </li>
+    </ul>
+  </nav>
+);
 export default Navbar;

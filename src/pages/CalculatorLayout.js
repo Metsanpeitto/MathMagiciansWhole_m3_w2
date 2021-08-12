@@ -2,8 +2,8 @@ import React from 'react';
 import Calculator from '../components/Calculator';
 
 const CalculatorLayout = () => (
-  <div>
-    <h1> Let`s do some math!</h1>
+  <div className="content">
+    <h5> Let`s do some math!</h5>
     <Calculator />
   </div>
 );
