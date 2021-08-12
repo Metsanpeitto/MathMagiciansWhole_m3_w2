@@ -42,11 +42,12 @@
 
 h5 {
   position: relative;
-  text-align: start;
+  text-align: end;
   padding-right: 5%;
   padding-top: 5%;
   padding-bottom: 5%;
   font-size: 18px;
+  background-color: gray;
   margin: unset;
 }
 
