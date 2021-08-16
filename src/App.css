@@ -50,6 +50,11 @@ h5 {
   margin: unset;
 }
 
+p {
+  font-weight: 400;
+  font-family: 'Circular-Loom', sans-serif;
+}
+
 .body-buttons {
   position: relative;
   display: grid;
