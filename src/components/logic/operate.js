@@ -13,7 +13,13 @@ export default function operate(numberOne, numberTwo, operation) {
     return one.times(two).toString();
   }
   if (operation === '÷') {
-    return one.div(two).toString();
+    let result = null;
+    if (two.c[0] === 0) {
+      result = 'error';
+    } else {
+      result = one.div(two).toString();
+    }
+    return result;
   }
   if (operation === '%') {
     return one.mod(two).toString();

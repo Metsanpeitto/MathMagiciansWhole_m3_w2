@@ -15,13 +15,21 @@ class Calculator extends React.Component {
   }
 
   proccessResult = (result) => {
-    this.setState(() => ({
-      display: result.total,
-      total: result.total,
-      next: result.next,
-      operation: result.operation,
-      toNumber1: true,
-    }));
+    let { total } = result;
+
+    if (!total) {
+      total = '0';
+    }
+
+    if (result) {
+      this.setState(() => ({
+        display: total,
+        total,
+        next: result.next,
+        operation: result.operation,
+        toNumber1: true,
+      }));
+    }
   };
 
   selectOperator = (event) => {
@@ -39,6 +47,13 @@ class Calculator extends React.Component {
         operation: option,
         toNumber1: false,
       }));
+    }
+
+    if (option === '+/-') {
+      const { total, next, operation } = this.state;
+      const obj = { total, next, operation };
+      const result = calculate(obj, option);
+      this.proccessResult(result);
     }
 
     if (option === 'AC') {
@@ -85,15 +100,24 @@ class Calculator extends React.Component {
 
     if (toNumber1 === true) {
       numberResult = newTotal;
+      let filteredNumber = numberResult;
+
       if (numberResult) {
-        numberResult += number;
+        const firstChar = numberResult.charCodeAt(0);
+        if (firstChar === 48) {
+          filteredNumber = numberResult.substring(1);
+        }
+      }
+
+      if (filteredNumber) {
+        filteredNumber += number;
       } else {
-        numberResult = number;
+        filteredNumber = number;
       }
 
       this.setState(() => ({
-        total: numberResult,
-        display: numberResult,
+        total: filteredNumber,
+        display: filteredNumber,
       }));
     } else {
       numberResult = next;
