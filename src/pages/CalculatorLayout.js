@@ -3,7 +3,7 @@ import Calculator from '../components/Calculator';
 
 const CalculatorLayout = () => (
   <div className="content">
-    <h6> Let`s do some math!</h6>
+    <h3> Let`s do some math!</h3>
     <Calculator />
   </div>
 );
