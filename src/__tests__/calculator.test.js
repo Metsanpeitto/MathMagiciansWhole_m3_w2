@@ -25,4 +25,9 @@ describe('Functions for testing calculator', () => {
   test('test if division 4 ÷ 2', () => {
     expect(resultDivision.total).toBe('2');
   });
+  const modulo = { total: '8', next: '5', operation: '%' };
+  const resultModulo = calculate(modulo, option);
+  test('test if remainder 8 % 5', () => {
+    expect(resultModulo.total).toBe('3');
+  });
 });
