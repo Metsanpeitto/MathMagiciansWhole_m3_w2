@@ -1,10 +1,11 @@
+/* eslint-disable quotes */
 // Copyright 2004-present Facebook. All Rights Reserved.
 
-import React from 'react';
-import renderer from 'react-test-renderer';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import React from "react";
+import renderer from "react-test-renderer";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
-it('renders correctly', () => {
+it("renders correctly", () => {
   const tree = renderer
     .create(
       <Router basename={process.env.PUBLIC_URL}>
