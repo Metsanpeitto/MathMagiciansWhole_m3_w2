@@ -1,7 +1,7 @@
 /**      A function for testing inputs and drag and drop events       */
 import '@testing-library/jest-dom/extend-expect';
 import 'regenerator-runtime/runtime';
-import calculate from '../test_files/calculator';
+import calculate from './test_files/calculator';
 
 describe('Functions for testing calculator', () => {
   const sume = { total: '1', next: '1', operation: '+' };
