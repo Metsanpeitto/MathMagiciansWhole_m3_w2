@@ -32,6 +32,16 @@ If you want a copy of this file go to the github repository and download it from
 [Live](https://github.com/Metsanpeitto/MathMagiciansWhole_m3_w2/)
 
 
+### Heroku
+
+[Heroku](https://mathmagicians-miroverse.herokuapp.com/)
+
+
+### Netlify
+
+[Netlify](https://confident-goldberg-637c70.netlify.app/)
+
+
 ### Setup
 
 ```cmd
