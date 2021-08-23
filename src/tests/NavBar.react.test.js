@@ -1,5 +1,3 @@
-// Copyright 2004-present Facebook. All Rights Reserved.
-
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
